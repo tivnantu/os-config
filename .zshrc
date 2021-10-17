@@ -136,9 +136,9 @@ alias drmi="docker image rm"
 alias di="docker image ls"
 
 function setproxy(){
-  export all_proxy=socks://127.0.0.1:1081/
-  export https_proxy=http://127.0.0.1:1080/
-  export http_proxy=http://127.0.0.1:1080/
+  export all_proxy=http://127.0.0.1:7890/
+  export https_proxy=http://127.0.0.1:7890/
+  export http_proxy=http://127.0.0.1:7890/
   export no_proxy=localhost,127.0.0.0/8,::1
 }
 
