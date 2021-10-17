@@ -1,0 +1,12 @@
+theme MC-OS-CTLine-Gnome
+icon Reversal-grey
+cursor Polarnight-cursors
+grub Tela
+
+extensions:
+  user-theme
+  Sound Input & Output Device Chooser
+  Proxy Switcher
+  Extensions
+  Hide Top Bar
+  
