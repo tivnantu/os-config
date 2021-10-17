@@ -15,3 +15,11 @@ nautilus:
   Nautilus Launch
   Nautilus Copy Path/Name
   Nautilus Hide
+
+dash-to-dock:
+  click-action minimize
+  middle-action minimize-or-overview
+  isolate-monitors 
+  isolate-workspace
+  size 32
+  
