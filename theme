@@ -2,6 +2,7 @@ theme MC-OS-CTLine-Gnome
 icon Reversal-grey
 cursor Polarnight-cursors
 grub Tela
+shell-theme Big Sur - OE2
 
 extensions:
   user-theme
