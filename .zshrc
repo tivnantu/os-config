@@ -1,13 +1,8 @@
-# zmodload zsh/zprof
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tivnan/.oh-my-zsh"
-
-export PATH="$HOME/.local/bin:$PATH"
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -16,10 +11,9 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # ZSH_THEME="arrow"
 # ZSH_THEME="bira"
-ZSH_THEME="agnoster"
 # ZSH_THEME="wuffers"
 # ZSH_THEME="wedisagree"
-
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -34,14 +28,13 @@ ZSH_THEME="agnoster"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -56,8 +49,9 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -82,13 +76,14 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  z
-  extract
-  sudo
-  safe-paste
-  colored-man-pages
-  zsh-nvm
-  zsh-syntax-highlighting
+    z
+    git
+    sudo
+    extract
+    zsh-nvm
+    safe-paste
+    colored-man-pages
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,37 +134,39 @@ alias drmi="docker image rm"
 alias di="docker image ls"
 
 function setproxy(){
-  export all_proxy=http://127.0.0.1:7890/
-  export https_proxy=http://127.0.0.1:7890/
-  export http_proxy=http://127.0.0.1:7890/
-  export no_proxy=localhost,127.0.0.0/8,::1
+    export all_proxy=http://127.0.0.1:7890/
+    export https_proxy=http://127.0.0.1:7890/
+    export http_proxy=http://127.0.0.1:7890/
+    export no_proxy=localhost,127.0.0.0/8,::1
 }
 
 function unsetproxy(){
-  unset all_proxy
-  unset https_proxy
-  unset http_proxy
-  unset no_proxy
+    unset all_proxy
+    unset https_proxy
+    unset http_proxy
+    unset no_proxy
 }
-
 
 function cdtemp(){
-  tempdirlog='/tmp/tempdir.log'
-  if [ $# -eq 0 ] && [ -f "$tempdirlog" ]; then
-      cd "$(tail -n 1 $tempdirlog)"
-  elif [ "$1" = "-l" ]; then
-      cat -n $tempdirlog
-  elif [ "$1" = "-n" ]; then
-      tempDir=$(mktemp -d)
-      echo "${tempDir}"
-      echo "${tempDir}" >> "$tempdirlog"
-      cd "${tempDir}"
-  elif  $(echo "$1" | grep -q '[0-9]'); then
-      cd "$(sed -n "$1,$1p" $tempdirlog)"
-  else
-      tempDir=$(mktemp -d)
-      echo "${tempDir}"
-      echo "${tempDir}" >> "$tempdirlog"
-      cd "${tempDir}"
-  fi
+    tempdirlog='/tmp/tempdir.log'
+    if [ $# -eq 0 ] && [ -f "$tempdirlog" ]; then
+        cd "$(tail -n 1 $tempdirlog)"
+    elif [ "$1" = "-l" ]; then
+        cat -n $tempdirlog
+    elif [ "$1" = "-n" ]; then
+        tempDir=$(mktemp -d)
+        echo "${tempDir}"
+        echo "${tempDir}" >> "$tempdirlog"
+        cd "${tempDir}"
+    elif  $(echo "$1" | grep -q '[0-9]'); then
+        cd "$(sed -n "$1,$1p" $tempdirlog)"
+    else
+        tempDir=$(mktemp -d)
+        echo "${tempDir}"
+        echo "${tempDir}" >> "$tempdirlog"
+        cd "${tempDir}"
+    fi
 }
+
+export PATH="$HOME/.local/bin:$PATH"
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
