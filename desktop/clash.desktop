@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=clash
+Comment=clash
+Exec=/opt/clash/clash-linux-amd64 %u
+Icon=/opt/clash/clash.png
+Type=Application
+Terminal=false
+Encoding=UTF-8
