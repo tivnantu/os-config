@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DrClientLinux
+Comment=DrClientLinux
+Exec=/opt/DrClient/DrClientLinux %u
+Icon=/opt/DrClient/network.png
+Type=Application
+Terminal=False
+Encoding=UTF-8

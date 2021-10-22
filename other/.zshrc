@@ -116,12 +116,13 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
 
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias autoremove="sudo apt autoremove"
 alias install="sudo apt install"
-alias uninstall="sudo apt remove --purge"
+alias uninstall="sudo apt remove --purge --autoremove"
 
 alias dp="docker container ls" 
 alias dpa="docker container ls -a"
@@ -134,7 +135,7 @@ alias drmi="docker image rm"
 alias di="docker image ls"
 
 function setproxy(){
-    export all_proxy=http://127.0.0.1:7890/
+    export all_proxy=socks://127.0.0.1:7890/
     export https_proxy=http://127.0.0.1:7890/
     export http_proxy=http://127.0.0.1:7890/
     export no_proxy=localhost,127.0.0.0/8,::1
@@ -173,3 +174,19 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 alias bat="batcat"
 alias fd="fdfind"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/conda/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/conda/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/conda/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/conda/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

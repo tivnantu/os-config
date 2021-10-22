@@ -1,0 +1,33 @@
+theme: 
+  MCOS-Theme: https://www.gnome-look.org/p/1241688/
+icon: 
+  Reversal icon theme: https://www.gnome-look.org/p/1340791/
+cursor:
+  Polarnight cursors: https://www.gnome-look.org/p/1615757/
+grub:
+  Tela grub theme: https://www.gnome-look.org/p/1307852/
+shell theme:
+  Big Sur - OE2: https://www.gnome-look.org/p/1451523/
+
+extensions:
+  User Themes
+  Sound Input & Output Device Chooser
+  Proxy Switcher
+  Extensions
+  Hide Top Bar
+  TopIcons Plus 
+  
+nautilus:
+  Nautilus Annotations
+  Nautilus Launch
+  Nautilus Copy Path/Name
+  Nautilus Hide
+
+dash-to-dock:
+  click-action minimize
+  middle-click-action minimize-or-overview
+  isolate-monitors 
+  isolate-workspace
+  extend-height
+  size 32
+  
