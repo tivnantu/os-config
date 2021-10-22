@@ -2,7 +2,7 @@ theme MC-OS-CTLine-Gnome
 icon Reversal-grey
 cursor Polarnight-cursors
 grub Tela
-shell-theme Big Sur - OE2
+shell-theme Big Sur - OE2 1.6
 
 extensions:
   user-theme
@@ -19,8 +19,9 @@ nautilus:
 
 dash-to-dock:
   click-action minimize
-  middle-action minimize-or-overview
+  middle-click-action minimize-or-overview
   isolate-monitors 
   isolate-workspace
+  extend-height true
   size 32
   
