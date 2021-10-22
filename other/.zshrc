@@ -122,7 +122,7 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias autoremove="sudo apt autoremove"
 alias install="sudo apt install"
-alias uninstall="sudo apt remove --purge --autoremove"
+alias uninstall="sudo apt remove --purge"
 
 alias dp="docker container ls" 
 alias dpa="docker container ls -a"
