@@ -23,6 +23,8 @@ nautilus:
   Nautilus Copy Path/Name
   Nautilus Hide
 
+  code-nautilus: https://github.com/harry-cpp/code-nautilus
+
 dash-to-dock:
   click-action minimize
   middle-click-action minimize-or-overview
