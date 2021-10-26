@@ -1,0 +1,71 @@
+# tomcat
+docker run -d --name tomcat \
+ -v /home/dev/tomcat/webapps:/usr/local/tomcat/webapps \
+ --network=dev tomcat 
+
+# mysql
+docker run --name mysql \
+ -v /home/dev/mysql/data/:/var/lib/mysql \
+ -e MYSQL_ROOT_PASSWORD=asdfgh --network=dev \
+ -d mysql
+
+# ssh
+docker run --detach  \
+ --env SSHWIFTY_DOCKER_TLSCERT="$(cat domain.crt)"\
+ --env SSHWIFTY_DOCKER_TLSCERTKEY="$(cat domain.key)"\
+ --network dev \
+ --name ssh niruix/sshwifty:latest 
+
+# terminal
+docker run -d \
+  --name terminal \
+  --network dev \
+  dushixiang/next-terminal:latest
+
+# code
+docker run -d --name=code -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Asia/Shanghai \
+  -e PASSWORD=asdfgh \
+  -e SUDO_PASSWORD=asdfgh \
+  --network=dev \
+  linuxserver/code-server
+
+
+# nginx
+docker run -p 80:80 -p 443:443 \
+  -v /home/dev/nginx/nginx.conf:/etc/nginx/nginx.conf \
+  -v /home/dev/nginx/file:/www/html/ \
+  -v /home/dev/nginx/cert:/etc/nginx/cert \
+  --network dev --name nginx -d nginx
+
+  docker run -p 80:80 -p 443:443 \
+  -v /root/nginx/nginx.conf:/etc/nginx/nginx.conf \
+  --name tivnan-nginx -d nginx
+
+docker run --detach \
+  --hostname gitlab.tivnan.cn \
+  --name gitlab \
+  --network dev \
+  --env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.tivnan.cn'; gitlab_rails['gitlab_ssh_host'] = 'gitlab.tivnan.cn'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
+  --volume /home/dev/gitlab/config:/etc/gitlab \
+  --volume /home/dev/gitlab/logs:/var/log/gitlab \
+  --volume /home/dev/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+
+docker run -d -p 20:20 -p 21:21 \
+  -p 21100-21110:21100-21110 \
+  -v /mnt/other/ftp:/home/vsftpd/admin \
+  -e FTP_USER=admin -e FTP_PASS=admin \
+  -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 \
+  -e PASV_ADDRESS=110.64.91.27 \
+  --name ftp --restart=always fauria/vsftpd
+
+docker run --name portainer \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /mydata/portainer/data:/data \
+--network=dev \
+-d portainer/portainer
+
+docker run -it --name tivnan-smb -p 139:139 -p 445:445 -v /mnt/OTHER/smb:/root/smb -d dperson/samba -w "admin" -u "admin;admin" -s "smb;/root/smb;yes;yes;yes;admin;admin;admin"
