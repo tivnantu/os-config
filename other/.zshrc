@@ -133,6 +133,7 @@ alias dre="docker container restart"
 alias drm="docker container rm -v"
 alias drmi="docker image rm"
 alias di="docker image ls"
+alias dsrm='func() { docker container stop $1; docker container rm $1 }; func'
 
 function setproxy(){
 #    export all_proxy=127.0.0.1:7890

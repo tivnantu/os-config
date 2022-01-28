@@ -1,12 +1,24 @@
----
-2021年1月14日
----
+https://blog.csdn.net/yyt593891927/article/details/108080649 | mysql复杂存储过程实例（游标、临时表、循环、递归）_丁爸的博客-CSDN博客_复杂的存储过程实例
+https://github.com/andialbrecht/sqlparse | andialbrecht/sqlparse: A non-validating SQL parser module for Python
+https://github.com/alibaba/druid | alibaba/druid: 阿里云计算平台DataWorks(https://help.aliyun.com/document_detail/137663.html) 团队出品，为监控而生的数据库连接池
+https://github.com/raysonfang/sql-translator | raysonfang/sql-translator: sql转换工具，支持oracle转mysql，后续支持各种数据库的sql互转。为项目迁移及跨库支持，提升效率迭代。
+https://mp.weixin.qq.com/s?__biz=MzI3MDU3OTc1Nw==&mid=2247485169&idx=1&sn=291abcdc9ad90718d71c28d0653c92e3&chksm=eacfa7b3ddb82ea5968e7d6661075f63bd30d4c6ac262a49e314cde2eaeef0ce95ec86ac360c&token=1201800479&lang=zh_CN#rd | 浅析构建SQL-to-SQL的翻译器
+
+https://www.bilibili.com/video/BV1AS4y177xJ?spm_id_from=444.41.0.0 | 尚硅谷丨2022版JavaWeb教程(全新技术栈,全程实战)_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1Kr4y1i7ru?spm_id_from=444.41.0.0 | 黑马程序员MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括_哔哩哔哩_bilibili
+
 https://github.com/sunym1993/flash-linux0.11-talk | sunym1993/flash-linux0.11-talk: 你管这破玩意叫操作系统源码 — 像小说一样品读 Linux 0.11 核心代码
 
 https://www.bilibili.com/video/BV1A44y1L76q?spm_id_from=444.41.0.0 | 为什么说「网络排查」是工程师的必备能力？_哔哩哔哩_bilibili
 https://www.bilibili.com/video/BV1nR4y1M7HD?spm_id_from=444.41.0.0 | [JetBrains Connect] 第七集 - 成为优秀的技术演讲者_哔哩哔哩_bilibili
 https://www.bilibili.com/video/BV1y44y157X2?spm_id_from=444.41.0.0 | 为什么不推荐程序员创业，程序员创业的十个坑（亲身经验分享）_哔哩哔哩_bilibili
 
+http://postgres.cn/docs/9.6/plpgsql.html | PL/pgSQL - SQL过程语言
+https://www.jianshu.com/p/cf3f5c0c6945 | PostgreSQL PL/pgSQL过程语言 - 简书
+https://www.yiibai.com/postgresql/postgresql-functions.html | PostgreSQL函数(存储过程) - PostgreSQL教程™
+https://py-postgresql.readthedocs.io/en/latest/ | py-postgresql — py-postgresql 1.3.0 documentation
+https://github.com/python-postgres/fe | python-postgres/fe: py-postgresql: Access and query a PostgreSQL database with Python 3.
+https://github.com/vimiix/py-opengauss | vimiix/py-opengauss: py-opengauss: Access and query a PostgreSQL or openGauss database with Python 3.
 https://hub.docker.com/r/enmotech/opengauss | enmotech/opengauss - Docker Image | Docker Hub
 https://www.modb.pro/openGauss | openGauss社区-技术文档、视频课程、问答、下载 - 墨天轮
 https://blog.51cto.com/u_15157671/2772609 | 如何在openGauss使用psycopg2驱动【图文】_openGauss_51CTO博客
