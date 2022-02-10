@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=clash
-Comment=clash
-Exec=/opt/clash/clash-linux-amd64 %u
-Icon=/opt/clash/clash.png
+Name=Firefox Developer Edition
+Comment=Firefox Developer Edition
+Exec=/opt/firefox/firefox %u
+Icon=firefox-developer-edition
 Type=Application
-Terminal=False
 Encoding=UTF-8
+Version=1.0
