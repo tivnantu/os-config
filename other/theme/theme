@@ -7,7 +7,7 @@ cursor:
 grub:
   Tela grub theme: https://www.gnome-look.org/p/1307852/
 shell theme:
-  Big Sur - OE2: https://www.gnome-look.org/p/1451523/
+  # Big Sur - OE2: https://www.gnome-look.org/p/1451523/
 
 extensions:
   User Themes
@@ -27,7 +27,7 @@ nautilus:
 
 dash-to-dock:
   click-action minimize
-  middle-click-action minimize-or-overview
+  middle-click-action previews
   isolate-monitors 
   isolate-workspace
   extend-height

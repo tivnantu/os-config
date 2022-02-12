@@ -174,8 +174,11 @@ export PATH="$HOME/.local/bin:$PATH"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 alias bat="batcat"
-alias fd="fdfind"
+alias bpat="batcat --style 'plain'"
 
+alias rm="trash"
+
+alias fd="fdfind"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

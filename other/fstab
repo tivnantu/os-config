@@ -14,4 +14,4 @@ UUID=5891-92F2  /boot/efi       vfat    defaults      0       1
 UUID=14DE8C7CDE8C583E /mnt/file ntfs defaults,uid=1000,umask=0002 0 2
 UUID=0E44046C0E44046C /mnt/work ntfs defaults,uid=1000,umask=0002  0 2
 UUID=0EEF14750EEF1475 /mnt/daily ntfs defaults,uid=1000,umask=0002  0 2
-UUID=0EA608F00EA608F0 /mnt/dev ntfs defaults,uid=1000,umask=0002  0 2
+UUID=0EA608F00EA608F0 /mnt/code ntfs defaults,uid=1000,umask=0002  0 2
