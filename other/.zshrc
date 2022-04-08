@@ -121,8 +121,9 @@ export NVM_AUTO_USE=true
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias autoremove="sudo apt autoremove"
+alias autoclean="sudo apt autoclean"
 alias install="sudo apt install"
-alias uninstall="sudo apt remove --purge"
+alias uninstall="sudo apt purge"
 
 alias dp="docker container ls" 
 alias dpa="docker container ls -a"
