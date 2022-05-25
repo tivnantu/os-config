@@ -9,5 +9,4 @@ smb
 sudo docker run -it --name tivnan-smb \
   -p 139:139 -p 445:445 \
   -v /mnt/daily/smb:/root/smb \
-  -d dperson/samba -w "admin" -u "admin;admin" -s "smb;/root/smb;yes;yes;yes;admin;admin;admin"
-  
+  -d dperson/samba -w "Everyone" -u "admin;admin" -s "smb;/root/smb;yes;yes;yes;admin;admin;admin"
