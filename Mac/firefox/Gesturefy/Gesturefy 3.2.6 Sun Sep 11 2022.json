@@ -1,0 +1,157 @@
+{
+  "Gestures": [
+    {
+      "pattern": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "command": {
+        "name": "FocusLeftTab",
+        "settings": {
+          "cycling": true,
+          "excludeDiscarded": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "command": {
+        "name": "FocusRightTab",
+        "settings": {
+          "cycling": true,
+          "excludeDiscarded": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          0,
+          1
+        ]
+      ],
+      "command": {
+        "name": "ScrollBottom",
+        "settings": {
+          "duration": 100
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "command": {
+        "name": "ScrollTop",
+        "settings": {
+          "duration": 100
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          1,
+          0
+        ]
+      ],
+      "command": {
+        "name": "PageForth"
+      }
+    },
+    {
+      "pattern": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "command": {
+        "name": "PageBack"
+      }
+    },
+    {
+      "pattern": [
+        [
+          36,
+          -24
+        ],
+        [
+          52,
+          -13
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          52,
+          46
+        ],
+        [
+          81,
+          150
+        ],
+        [
+          3,
+          71
+        ],
+        [
+          -11,
+          29
+        ],
+        [
+          -36,
+          27
+        ],
+        [
+          -95,
+          26
+        ],
+        [
+          -55,
+          -21
+        ]
+      ],
+      "command": {
+        "name": "ReloadTab",
+        "settings": {
+          "cache": true
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -12,
+          301
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          235,
+          -24
+        ]
+      ],
+      "command": {
+        "name": "CloseTab",
+        "settings": {
+          "nextFocus": "default",
+          "closePinned": true
+        }
+      }
+    }
+  ]
+}
