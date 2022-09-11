@@ -108,7 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 setopt nonomatch
+
 function setproxy(){
     export https_proxy=http://127.0.0.1:12639
     export http_proxy=http://127.0.0.1:12639
@@ -144,37 +146,16 @@ function cdtmp(){
     fi
 }
 
-docker-edit() {
-    trap 'rm -f "$TMPFILE"' EXIT 1 #确保脚本退出时临时文件被删除
-
-    # 提示用户补全参数
-    if [ "$#" -ne 2 ]; then
-        echo "请输入容器id和文件路径"
-        echo "例如：docker-edit alpine /root/hello.txt"
-        exit 1
-    fi
-
-    TMPFILE=$(mktemp) || exit 1                                        #临时文件，用于保存文件内容
-    FILECONTENT=$(docker container exec "$1" sh -c "cat $2") || exit 1 #读取容器内文件内容
-    echo "$FILECONTENT" >"$TMPFILE"                                    #将文件内容输出到临时文件
-    vim "$TMPFILE" || exit 1                                           #编辑临时文件
-    docker container exec -i "$1" sh -c "cat > $2" <"$TMPFILE"         #将临时文件的内容输入到容器文件内
-}
-
-export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
-
-alias bpat="bat --style 'plain'"
-
-batdiff() {
-    git diff --name-only --relative --diff-filter=d | xargs bat --diff
-}
-
-shortdir() {
+function shortdir() {
     prompt_dir() {
         prompt_segment blue $CURRENT_FG '%2d'
     }
 }
 
+alias bpat="bat --style 'plain'"
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias git="git --no-pager"
 alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
