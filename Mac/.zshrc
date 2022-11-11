@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 setopt nonomatch
 
+export PATH="$HOME/.local/bin:$PATH"
+
 function setproxy(){
     export https_proxy=http://127.0.0.1:12639
     export http_proxy=http://127.0.0.1:12639
@@ -156,6 +158,9 @@ alias bpat="bat --style 'plain'"
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias git="git --no-pager"
 alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
+alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+cd ~/Documents/code
