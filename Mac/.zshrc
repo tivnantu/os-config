@@ -74,7 +74,11 @@ plugins=(
     z
     git
     sudo
+    aliases
     extract
+    copypath
+    copyfile
+    copybuffer
     safe-paste
     colored-man-pages
     zsh-syntax-highlighting
@@ -162,5 +166,3 @@ alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
-cd ~/Documents/code
