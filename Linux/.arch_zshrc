@@ -120,10 +120,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 function setproxy(){
-#    export all_proxy=127.0.0.1:7890
-    export https_proxy=127.0.0.1:7890
-    export http_proxy=127.0.0.1:7890
-    export no_proxy=localhost,127.0.0.0/8,::1
+    ip_addr=127.0.0.1
+    proxy_port=7890
+    export https_proxy=http://"$ip_addr":"$proxy_port"
+    export http_proxy=http://"$ip_addr":"$proxy_port"
+    export all_proxy=socks5://"$ip_addr":"$proxy_port"
+    export no_proxy="127.0.0.1, localhost, mirrors.tencent.com"
 }
 
 function unsetproxy(){
