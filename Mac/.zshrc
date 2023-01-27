@@ -116,11 +116,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 setopt nonomatch
 
 export PATH="$HOME/.local/bin:$PATH"
-
 function setproxy(){
-    export https_proxy=http://127.0.0.1:12639
-    export http_proxy=http://127.0.0.1:12639
-    export all_proxy=socks5://127.0.0.1:12639
+    ip_addr=127.0.0.1
+    proxy_port=7890
+    export https_proxy=http://"$ip_addr":"$proxy_port"
+    export http_proxy=http://"$ip_addr":"$proxy_port"
+    export all_proxy=socks5://"$ip_addr":"$proxy_port"
     export no_proxy="127.0.0.1, localhost, mirrors.tencent.com"
 }
 
