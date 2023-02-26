@@ -119,13 +119,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$HOME/.local/bin:$PATH"
+
+alias git="git --no-pager"
+alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
+alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
+
 function setproxy(){
     ip_addr=127.0.0.1
     proxy_port=7890
     export https_proxy=http://"$ip_addr":"$proxy_port"
     export http_proxy=http://"$ip_addr":"$proxy_port"
     export all_proxy=socks5://"$ip_addr":"$proxy_port"
-    export no_proxy="127.0.0.1, localhost, mirrors.tencent.com"
+    export no_proxy="localhost, 127.0.0.1, ::1"
 }
 
 function unsetproxy(){
@@ -161,8 +167,3 @@ function shortdir() {
         prompt_segment blue $CURRENT_FG '%2d'
     }
 }
-
-alias bpat="bat --style 'plain'"
-alias git="git --no-pager"
-alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
-alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
