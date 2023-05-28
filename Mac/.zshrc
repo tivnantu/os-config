@@ -113,10 +113,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 setopt nonomatch
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.local/bin:$PATH"
+
+alias git="git --no-pager"
+alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
+alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
 
 function setproxy(){
     ip_addr=127.0.0.1
@@ -161,35 +166,9 @@ function shortdir() {
     }
 }
 
-alias bpat="bat --style 'plain'"
-alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
-alias git="git --no-pager"
-alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
-alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
-
 function gformat() {
   cd $1
   cp /Users/tivnantu/Documents/code/iPhoneqq/clang-format .clang-format
   git diff -U0 HEAD^ | /opt/homebrew/Cellar/clang-format/15.0.6/share/clang/clang-format-diff.py -i -p1 
   cd -
 }
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/tivnantu/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/tivnantu/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/tivnantu/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/tivnantu/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-

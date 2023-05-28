@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Firefox Developer Edition
-Comment=Firefox Developer Edition
-Exec=/opt/firefox/firefox %u
-Icon=firefox-developer-edition
-Type=Application
-Encoding=UTF-8
-Version=1.0
