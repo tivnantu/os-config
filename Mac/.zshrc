@@ -120,7 +120,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 alias git="git --no-pager"
-alias glm="git log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit -20"
+alias glm="git log --graph --color --date=format:'%H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(bold green)(%cr x %cd)%C(reset)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit -20"
 alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
 
 function setproxy(){
