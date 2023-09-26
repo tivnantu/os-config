@@ -165,10 +165,3 @@ function shortdir() {
         prompt_segment blue $CURRENT_FG '%2d'
     }
 }
-
-function gformat() {
-  cd $1
-  cp /Users/tivnantu/Documents/code/iPhoneqq/clang-format .clang-format
-  git diff -U0 HEAD^ | /opt/homebrew/Cellar/clang-format/15.0.6/share/clang/clang-format-diff.py -i -p1 
-  cd -
-}
