@@ -76,6 +76,7 @@ plugins=(
     sudo
     aliases
     extract
+    history
     copypath
     copyfile
     copybuffer

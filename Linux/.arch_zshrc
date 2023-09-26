@@ -82,6 +82,7 @@ plugins=(
     docker
     aliases
     extract
+    history
     copypath
     copyfile
     copybuffer
