@@ -1,27 +1,25 @@
-theme: 
-  MCOS-Theme: https://www.gnome-look.org/p/1241688/
-icon: 
-  Reversal icon theme: https://www.gnome-look.org/p/1340791/
-cursor:
-  Polarnight cursors: https://www.gnome-look.org/p/1615757/
-grub:
-  Tela grub theme: https://www.gnome-look.org/p/1307852/
-shell theme:
-  # Big Sur - OE2: https://www.gnome-look.org/p/1451523/
+theme: WhiteSur-Light
+icon: Reversal icon theme
+cursor: Polarnight cursors
+grub: Tela grub theme
+shell theme: Jasper-Dark
 
 extensions:
-  User Themes
-  Sound Input & Output Device Chooser
+  AppIndicator and KStatusNotifierItem Support
+  Dash To Dock
+  Hibernate Status Button
   Proxy Switcher
-  Extensions
-  Hide Top Bar
-  TopIcons Plus
+  Rounded Window Corners
+  Soft Brightness Plus
+  Sound Input & Output Device Chooser
+  User Themes
   
 nautilus:
   Nautilus Annotations
   Nautilus Launch
   Nautilus Copy Path/Name
   Nautilus Hide
+  nautilus-open-any-terminal
 
   code-nautilus: https://github.com/harry-cpp/code-nautilus
 

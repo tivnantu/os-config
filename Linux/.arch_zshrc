@@ -83,6 +83,7 @@ plugins=(
     aliases
     extract
     history
+    zsh-nvm
     copypath
     copyfile
     copybuffer
