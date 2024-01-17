@@ -115,6 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 setopt nonomatch
+setopt hist_ignore_all_dups
+
+eval "$(direnv hook zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -124,7 +127,7 @@ alias git="git --no-pager"
 alias glm="git log --graph --color --date=format:'%H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(bold green)(%cr x %cd)%C(reset)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit -20"
 alias gbdd='gb | rg -v "$(gb --show-current)" | xargs git branch -D'
 
-function setproxy(){
+function setproxy() {
     ip_addr=127.0.0.1
     proxy_port=7890
     export https_proxy=http://"$ip_addr":"$proxy_port"
@@ -133,14 +136,14 @@ function setproxy(){
     export no_proxy="127.0.0.1, localhost, mirrors.tencent.com"
 }
 
-function unsetproxy(){
+function unsetproxy() {
     unset https_proxy
     unset http_proxy
     unset all_proxy
     unset no_proxy
 }
 
-function cdtmp(){
+function cdtmp() {
     tempdirlog='/tmp/tempdir.log'
     if [ $# -eq 0 ] && [ -f "$tempdirlog" ]; then
         cd "$(tail -n 1 $tempdirlog)"
@@ -149,14 +152,14 @@ function cdtmp(){
     elif [ "$1" = "-n" ]; then
         tempDir=$(mktemp -d)
         echo "${tempDir}"
-        echo "${tempDir}" >> "$tempdirlog"
+        echo "${tempDir}" >>"$tempdirlog"
         cd "${tempDir}"
-    elif  $(echo "$1" | grep -q '[0-9]'); then
+    elif $(echo "$1" | grep -q '[0-9]'); then
         cd "$(sed -n "$1,$1p" $tempdirlog)"
     else
         tempDir=$(mktemp -d)
         echo "${tempDir}"
-        echo "${tempDir}" >> "$tempdirlog"
+        echo "${tempDir}" >>"$tempdirlog"
         cd "${tempDir}"
     fi
 }
