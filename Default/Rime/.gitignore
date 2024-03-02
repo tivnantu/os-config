@@ -1,4 +1,4 @@
+*.userdb/
 build
 installation.yaml
-sync
 user.yaml

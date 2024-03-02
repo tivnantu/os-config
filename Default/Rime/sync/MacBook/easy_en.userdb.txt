@@ -1,0 +1,34 @@
+# Rime user dictionary
+#@/db_name	easy_en
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	40
+#@/user_id	MacBook
+arch 	arch	c=1 d=0.941765 t=40
+begin 	begin	c=1 d=0.882497 t=40
+brew 	brew	c=2 d=1.79069 t=40
+case 	case	c=1 d=0.995012 t=40
+chat 	chat	c=1 d=0.865022 t=40
+code 	code	c=1 d=0.904837 t=40
+dna 	DNA	c=1 d=1 t=40
+install 	install	c=1 d=0.937067 t=40
+juke 	juke	c=3 d=2.61744 t=40
+mark 	mark	c=1 d=0.847894 t=40
+power 	power	c=1 d=0.932394 t=40
+query 	query	c=1 d=0.909373 t=40
+self 	self	c=1 d=0.909373 t=40
+ship 	ship	c=1 d=0.923116 t=40
+song 	song	c=1 d=0.822835 t=40
+swift 	swift	c=5 d=4.2204 t=40
+tab 	tab	c=5 d=4.39607 t=40
+target 	target	c=1 d=0.99005 t=40
+text 	text	c=1 d=0.980199 t=40
+thank 	thank	c=1 d=0.878095 t=40
+toast 	toast	c=1 d=0.946485 t=40
+ui 	UI	c=1 d=0.891366 t=40
+update 	update	c=4 d=3.87215 t=40
+version 	version	c=1 d=0.918512 t=40
+went 	went	c=2 d=1.79616 t=40
+will 	will	c=1 d=0.985112 t=40
+with 	with	c=1 d=0.927743 t=40
+women 	women	c=3 d=2.51839 t=40
