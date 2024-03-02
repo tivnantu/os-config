@@ -1,0 +1,28 @@
+[user]
+	name = tivnantu
+	email = tivnantu@tencent.com
+[core]
+	pager = delta
+	excludesfile = /Users/ta/.gitignore_global
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[push]
+	autoSetupRemote = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	light = false
+	side-by-side = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[url "git@git.woa.com:"]
+	insteadOf = git@git.code.oa.com:
+	insteadOf = http://git.code.oa.com/
+	insteadOf = http://git.woa.com/
+	insteadOf = https://git.code.oa.com/
+	insteadOf = https://git.woa.com/
