@@ -1,0 +1,23 @@
+[user]
+	name = tivnantu
+	email = tivnantu@163.com
+[core]
+	pager = delta
+	quotepath = false
+	excludesfile = /home/tivnantu/.gitignore_global
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[push]
+	autoSetupRemote = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	light = false
+	side-by-side = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
