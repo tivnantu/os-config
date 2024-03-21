@@ -27,7 +27,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias cpath="copypath"
 alias cfile="copyfile"
-alias glm="glgg --date=format:'%H:%M:%S' --pretty=format:'%Cred%h%Creset - %C(bold green)(%ar ~ %ad)%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s' -16"
+alias glm="glgg --date=format:'%H:%M:%S' --pretty=format:'%Cred%h%Creset - %C(bold green)(%cr ~ 8+%cd)%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s' -16"
 alias gbdd='gb | rg -xv "^\* $(gb --show-current)" | xargs git branch -D'
 
 function setproxy() {
