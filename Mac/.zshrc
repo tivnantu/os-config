@@ -36,7 +36,7 @@ function setproxy() {
     export https_proxy=http://"$ip_addr":"$proxy_port"
     export http_proxy=http://"$ip_addr":"$proxy_port"
     export all_proxy=socks5://"$ip_addr":"$proxy_port"
-    export no_proxy="127.0.0.1, localhost, mirrors.tencent.com"
+    export no_proxy="localhost, 127.0.0.1, ::1"
 }
 
 function unsetproxy() {
