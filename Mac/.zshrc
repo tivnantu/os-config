@@ -7,7 +7,7 @@ ZSH_THEME="agnoster"
 ZSH_PLUGINS_PATH="${ZSH_CUSTOM:-$ZSH/custom}/plugins"
 
 PLUGIN_FZF_TAB="$ZSH_PLUGINS_PATH/fzf-tab"
-if [ ! -d "$PLUGIN_SYNTAX_HIGHLIGHTING" ]; then
+if [ ! -d "$PLUGIN_FZF_TAB" ]; then
   git clone https://github.com/Aloxaf/fzf-tab "$PLUGIN_FZF_TAB"
 fi
 
