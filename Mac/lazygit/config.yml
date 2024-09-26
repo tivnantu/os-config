@@ -2,3 +2,7 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never --line-numbers --keep-plus-minus-markers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --
+  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
+gui:
+  nerdFontsVersion: "3"
