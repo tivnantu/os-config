@@ -47,12 +47,11 @@ setopt hist_ignore_all_dups
 
 # export
 export BAT_THEME="gruvbox-dark"
-export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
-export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 # alias
+alias lg="lazygit"
 alias cpath="copypath"
 alias cfile="copyfile"
 alias glm="glgg --date=format:'%H:%M:%S' --pretty=format:'%Cred%h%Creset - %C(bold green)(%cr ~ 8+%cd)%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s' -16"
