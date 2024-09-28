@@ -172,3 +172,5 @@ patch:
   app_options:
     com.googlecode.iterm2:
       no_inline: false
+    org.p0deje.Maccy:
+      ascii_mode: true

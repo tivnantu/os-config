@@ -9,6 +9,8 @@ schema:
     - 佛振 <chen.sst@gmail.com>
   description: |
     朙月拼音，簡化字輸出模式。
+  dependencies:
+    - radical_pinyin
 switches:
   - name: ascii_mode
     reset: 0
@@ -40,9 +42,16 @@ engine:
     - punct_translator
     - table_translator@custom_phrase
     - script_translator
+    - reverse_lookup_translator
   filters:
     - simplifier
     - uniquifier
+
+reverse_lookup:
+  dictionary: radical_pinyin
+  enable_completion: true
+  prefix: "u"
+  tips: 〔拆〕
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
@@ -92,3 +101,5 @@ key_binder:
 
 recognizer:
   import_preset: default
+  patterns:
+    reverse_lookup: "u[a-z;]*?$"
