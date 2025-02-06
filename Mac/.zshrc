@@ -15,7 +15,7 @@ PLUGIN_FOR_GIT="$ZSH_PLUGINS_PATH/forgit"
 export forgit_rebase="gfrb"
 export forgit_reset_head="gfrh"
 export forgit_stash_show="gsts"
-export forgit_stash_push="gstp"
+# export forgit_stash_push="gstp"
 export forgit_cherry_pick="gfcp"
 export forgit_checkout_commit="gco"
 if [ ! -d "$PLUGIN_FOR_GIT" ]; then
@@ -121,4 +121,3 @@ function shortdir() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
