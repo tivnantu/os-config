@@ -16,6 +16,7 @@
 	conflictstyle = diff3
 [interactive]
 	diffFilter = delta --color-only
+	diffContext = 50
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
