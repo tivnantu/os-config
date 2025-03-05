@@ -1,3 +1,4 @@
+#!/bin/bash
 brew tap brewforge/chinese
 brew tap brewforge/extras
 
@@ -6,6 +7,7 @@ brew install alt-tab \
    bat \
    bat-extras \
    clash-verge-rev \
+   dust \
    fd \
    firefox \
    firefox@developer-edition \
