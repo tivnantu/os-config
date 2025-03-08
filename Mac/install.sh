@@ -39,10 +39,12 @@ brew install alt-tab \
    sensiblesidebuttons \
    snipaste \
    sourcetree \
-   squirrel \
    tencent-lemon \
    utools \
    visual-studio-code \
    wechat \
    wechatwork \
+   xcodes
+
+brew install --cask squirrel \
    xcodes
