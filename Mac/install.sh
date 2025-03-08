@@ -2,7 +2,8 @@
 brew tap brewforge/chinese
 brew tap brewforge/extras
 
-brew install alt-tab \
+brew install \
+   alt-tab \
    android-file-transfer \
    bat \
    bat-extras \
@@ -43,7 +44,10 @@ brew install alt-tab \
    utools \
    visual-studio-code \
    wechat \
-   wechatwork \
+   wechatwork
+
+brew install --cask \
+   squirrel \
    xcodes
 
 brew install --cask squirrel \
