@@ -4,14 +4,12 @@
     <dict>
         <key>FILEHEADER</key>
         <string>
-//
 // ___FILENAME___
 // ___PACKAGENAME___
 //
 // Created by tivnantu on ___DATE___
 // Copyright © ___YEAR___ tivnantu. All rights reserved.
-//
-        </string>
+//</string>
     </dict>
 </plist>
 

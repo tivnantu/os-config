@@ -49,6 +49,3 @@ brew install \
 brew install --cask \
    squirrel \
    xcodes
-
-brew install --cask squirrel \
-   xcodes
