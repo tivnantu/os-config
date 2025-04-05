@@ -4,7 +4,6 @@ brew tap brewforge/extras
 
 brew install \
    alt-tab \
-   android-file-transfer \
    bat \
    bat-extras \
    clash-verge-rev \
@@ -45,6 +44,8 @@ brew install \
    visual-studio-code \
    wechat \
    wechatwork
+
+# brew install eqmac
 
 brew install --cask \
    squirrel \
