@@ -78,11 +78,11 @@ alias gbdd='gb | rg -xv "^\* $(gb --show-current)" | xargs git branch -D'
 # func
 function setproxy() {
     ip_addr=127.0.0.1
-    proxy_port=7890
+    proxy_port=${1:-7890}
     export https_proxy=http://"$ip_addr":"$proxy_port"
     export http_proxy=http://"$ip_addr":"$proxy_port"
     export all_proxy=socks5://"$ip_addr":"$proxy_port"
-    export no_proxy="localhost, 127.0.0.1, ::1"
+    export no_proxy="localhost,127.0.0.1,::1"
 }
 
 function unsetproxy() {
