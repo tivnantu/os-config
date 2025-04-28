@@ -1,6 +1,7 @@
 #!/bin/bash
 brew tap brewforge/chinese
 brew tap brewforge/extras
+brew tap lihaoyun6/tap
 
 brew install \
    alt-tab \
@@ -34,6 +35,7 @@ brew install \
    pipenv \
    qq \
    qqmusic \
+   quickrecorder \
    rectangle \
    ripgrep \
    sensiblesidebuttons \
