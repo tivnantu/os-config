@@ -1,4 +1,5 @@
-# Rime configuration
+# patch:
+#   __include: hant
 
 hant:
   grammar:
