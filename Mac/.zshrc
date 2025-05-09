@@ -65,8 +65,9 @@ setopt hist_ignore_all_dups
 
 # export
 export BAT_THEME="gruvbox-dark"
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
 
 # alias
 alias lg="lazygit"
@@ -120,4 +121,3 @@ function shortdir() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source /Users/ta/.rvm/gems/ruby-3.3.7/gems/tpod-0.7.7/lib/tpod/Resources/tpod_completion.sh
