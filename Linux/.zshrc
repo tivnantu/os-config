@@ -6,6 +6,22 @@ ZSH_THEME="agnoster"
 # plugin manager
 ZSH_PLUGINS_PATH="${ZSH_CUSTOM:-$ZSH/custom}/plugins"
 
+PLUGIN_ALAIS_TIPS="$ZSH_PLUGINS_PATH/alias-tips"
+if [ ! -d "$PLUGIN_ALAIS_TIPS" ]; then
+    git clone https://github.com/djui/alias-tips.git "$PLUGIN_ALAIS_TIPS"
+fi
+
+PLUGIN_FOR_GIT="$ZSH_PLUGINS_PATH/forgit"
+export forgit_rebase="gfrb"
+export forgit_reset_head="gfrh"
+export forgit_stash_show="gsts"
+# export forgit_stash_push="gstp"
+export forgit_cherry_pick="gfcp"
+export forgit_checkout_commit="gco"
+if [ ! -d "$PLUGIN_FOR_GIT" ]; then
+    git clone https://github.com/wfxr/forgit.git "$PLUGIN_FOR_GIT"
+fi
+
 PLUGIN_FZF_TAB="$ZSH_PLUGINS_PATH/fzf-tab"
 if [ ! -d "$PLUGIN_FZF_TAB" ]; then
   git clone https://github.com/Aloxaf/fzf-tab "$PLUGIN_FZF_TAB"
@@ -24,13 +40,16 @@ fi
 plugins=(
     z
     git
+    fzf
     sudo
+    forgit
     aliases
     extract
     fzf-tab
     history
     copypath
     copyfile
+    alias-tips
     safe-paste
     zsh-256color
     colored-man-pages
@@ -39,7 +58,6 @@ plugins=(
 
 # source
 source $ZSH/oh-my-zsh.sh
-eval "$(fzf --zsh)"
 
 # opt
 setopt nonomatch

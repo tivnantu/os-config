@@ -1,0 +1,6 @@
+可以不用ntfs3g
+
+UUID=0DD908DC0DD908DC	/mnt/file	ntfs defaults,uid=1000,umask=0002 0 2
+UUID=0DD908F80DD908F8	/mnt/other	ntfs defaults,uid=1000,umask=0002 0 2
+UUID=0CAE1B1A0CAE1B1A	/mnt/code	ntfs defaults,uid=1000,umask=0002 0 2
+UUID=050D9AB5E32D8974	/mnt/space	ntfs defaults,uid=1000,umask=0002 0 2
