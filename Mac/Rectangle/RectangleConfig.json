@@ -237,6 +237,10 @@
     }
   },
   "shortcuts" : {
+    "center" : {
+      "keyCode" : 125,
+      "modifierFlags" : 1966080
+    },
     "centerThird" : {
       "keyCode" : 3,
       "modifierFlags" : 786432
