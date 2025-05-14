@@ -24,6 +24,7 @@ brew install \
    i4tools \
    iterm2 \
    jordanbaird-ice \
+   karabiner-elements \
    klogg \
    lazygit \
    localsend \
