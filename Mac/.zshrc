@@ -32,6 +32,12 @@ if [ ! -d "$PLUGIN_256COLOR" ]; then
   git clone https://github.com/chrissicool/zsh-256color "$PLUGIN_256COLOR"
 fi
 
+PLUGIN_AUTOUPDATE="$ZSH_PLUGINS_PATH/ohmyzsh-full-autoupdate"
+if [ ! -d "$PLUGIN_AUTOUPDATE" ]; then
+  git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate "$PLUGIN_AUTOUPDATE"
+fi
+
+
 PLUGIN_SYNTAX_HIGHLIGHTING="$ZSH_PLUGINS_PATH/zsh-syntax-highlighting"
 if [ ! -d "$PLUGIN_SYNTAX_HIGHLIGHTING" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$PLUGIN_SYNTAX_HIGHLIGHTING"
@@ -53,6 +59,7 @@ plugins=(
     safe-paste
     zsh-256color
     colored-man-pages
+    ohmyzsh-full-autoupdate
     zsh-syntax-highlighting
 )
 

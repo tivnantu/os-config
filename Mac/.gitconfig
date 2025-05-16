@@ -2,6 +2,7 @@
 	name = tivnantu
 	email = tivnantu@tencent.com
 [core]
+	editor = nvim
 	pager = delta
 	excludesfile = /Users/ta/.gitignore_global
 [diff]

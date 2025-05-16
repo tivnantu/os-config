@@ -2,6 +2,7 @@
 	name = tivnantu
 	email = tivnantu@163.com
 [core]
+	editor = nvim
 	pager = delta
 [diff]
 	colorMoved = default
