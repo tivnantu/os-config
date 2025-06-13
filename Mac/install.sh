@@ -2,8 +2,12 @@
 
 set -e
 
+# brew
 brew tap brewforge/chinese
 brew tap brewforge/extras
+
+brew update
+brew upgrade
 
 brew install \
    alt-tab \
@@ -30,9 +34,11 @@ brew install \
    localsend \
    lookin \
    maccy \
+   mas \
    monitorcontrol \
    mos \
    nomachine \
+   openmtp \
    openinterminal \
    pipenv \
    qq \
@@ -44,7 +50,9 @@ brew install \
    snipaste \
    sourcetree \
    tencent-lemon \
+   tencent-meeting \
    utools \
+   virtualbuddy \
    visual-studio-code \
    wechat \
    wechatwork
@@ -54,3 +62,8 @@ brew install \
 brew install --cask \
    squirrel \
    xcodes
+
+# appstore apps
+mas upgrade
+mas install 6448461551 # Command X
+mas install 1274495053 # Microsoft To Do
